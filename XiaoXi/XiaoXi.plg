@@ -1,0 +1,54 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: XiaoXi - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Release/XiaoXi.res" /d "NDEBUG" /d "_AFXDLL" "D:\c programs\C_WORKSPACE\XiaoXi\XiaoXi.rc"" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP216.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/XiaoXi.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\c programs\C_WORKSPACE\XiaoXi\MainFrm.cpp"
+"D:\c programs\C_WORKSPACE\XiaoXi\XiaoXi.cpp"
+"D:\c programs\C_WORKSPACE\XiaoXi\XiaoXiDoc.cpp"
+"D:\c programs\C_WORKSPACE\XiaoXi\XiaoXiView.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP216.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP217.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/XiaoXi.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\c programs\C_WORKSPACE\XiaoXi\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP217.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP218.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release/XiaoXi.pdb" /machine:I386 /out:"Release/XiaoXi.exe" 
+".\Release\MainFrm.obj"
+".\Release\StdAfx.obj"
+".\Release\XiaoXi.obj"
+".\Release\XiaoXiDoc.obj"
+".\Release\XiaoXiView.obj"
+".\Release\XiaoXi.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP218.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+MainFrm.cpp
+XiaoXi.cpp
+XiaoXiDoc.cpp
+XiaoXiView.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+XiaoXi.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
