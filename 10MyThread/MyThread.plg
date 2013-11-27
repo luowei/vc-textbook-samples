@@ -1,0 +1,54 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MyThread - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Release/MyThread.res" /d "NDEBUG" /d "_AFXDLL" "D:\c_programs\C_WORKSPACE\VC教材实例\10MyThread\MyThread.rc"" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPC1.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/MyThread.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\c_programs\C_WORKSPACE\VC教材实例\10MyThread\MainFrm.cpp"
+"D:\c_programs\C_WORKSPACE\VC教材实例\10MyThread\MyThread.cpp"
+"D:\c_programs\C_WORKSPACE\VC教材实例\10MyThread\MyThreadDoc.cpp"
+"D:\c_programs\C_WORKSPACE\VC教材实例\10MyThread\MyThreadView.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPC1.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPC2.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/MyThread.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\c_programs\C_WORKSPACE\VC教材实例\10MyThread\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPC2.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPC3.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release/MyThread.pdb" /machine:I386 /out:"Release/MyThread.exe" 
+".\Release\MainFrm.obj"
+".\Release\MyThread.obj"
+".\Release\MyThreadDoc.obj"
+".\Release\MyThreadView.obj"
+".\Release\StdAfx.obj"
+".\Release\MyThread.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPC3.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+MainFrm.cpp
+MyThread.cpp
+MyThreadDoc.cpp
+MyThreadView.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+MyThread.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

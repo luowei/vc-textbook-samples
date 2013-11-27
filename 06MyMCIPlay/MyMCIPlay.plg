@@ -1,0 +1,52 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MyMCIPlay - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Release/MyMCIPlay.res" /d "NDEBUG" /d "_AFXDLL" "D:\c_programs\C_WORKSPACE\VC教材实例\06MyMCIPlay\MyMCIPlay.rc"" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP64.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/MyMCIPlay.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\c_programs\C_WORKSPACE\VC教材实例\06MyMCIPlay\MCIClass.cpp"
+"D:\c_programs\C_WORKSPACE\VC教材实例\06MyMCIPlay\MyMCIPlay.cpp"
+"D:\c_programs\C_WORKSPACE\VC教材实例\06MyMCIPlay\MyMCIPlayDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP64.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP65.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/MyMCIPlay.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\c_programs\C_WORKSPACE\VC教材实例\06MyMCIPlay\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP65.tmp" 
+Creating command line "link.exe /nologo /subsystem:windows /incremental:no /pdb:"Release/MyMCIPlay.pdb" /machine:I386 /out:"Release/MyMCIPlay.exe"  ".\Release\MCIClass.obj" ".\Release\MyMCIPlay.obj" ".\Release\MyMCIPlayDlg.obj" ".\Release\StdAfx.obj" ".\Release\MyMCIPlay.res" "
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+MCIClass.cpp
+D:\c_programs\C_WORKSPACE\VC教材实例\06MyMCIPlay\MCIClass.cpp(74) : error C2601: 'Close' : local function definitions are illegal
+D:\c_programs\C_WORKSPACE\VC教材实例\06MyMCIPlay\MCIClass.cpp(83) : error C2601: 'Play' : local function definitions are illegal
+D:\c_programs\C_WORKSPACE\VC教材实例\06MyMCIPlay\MCIClass.cpp(108) : error C2601: 'Stop' : local function definitions are illegal
+D:\c_programs\C_WORKSPACE\VC教材实例\06MyMCIPlay\MCIClass.cpp(115) : error C2601: 'SetTimeFormat' : local function definitions are illegal
+D:\c_programs\C_WORKSPACE\VC教材实例\06MyMCIPlay\MCIClass.cpp(124) : error C2601: 'GetLength' : local function definitions are illegal
+D:\c_programs\C_WORKSPACE\VC教材实例\06MyMCIPlay\MCIClass.cpp(140) : error C2601: 'GetTimeFormatA' : local function definitions are illegal
+D:\c_programs\C_WORKSPACE\VC教材实例\06MyMCIPlay\MCIClass.cpp(151) : error C2601: 'GetPosition' : local function definitions are illegal
+D:\c_programs\C_WORKSPACE\VC教材实例\06MyMCIPlay\MCIClass.cpp(164) : error C2601: 'IsMediumOpen' : local function definitions are illegal
+D:\c_programs\C_WORKSPACE\VC教材实例\06MyMCIPlay\MCIClass.cpp(169) : error C2601: 'IsMediumPresent' : local function definitions are illegal
+D:\c_programs\C_WORKSPACE\VC教材实例\06MyMCIPlay\MCIClass.cpp(188) : fatal error C1903: unable to recover from previous error(s); stopping compilation
+MyMCIPlay.cpp
+MyMCIPlayDlg.cpp
+Generating Code...
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+MyMCIPlay.exe - 10 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

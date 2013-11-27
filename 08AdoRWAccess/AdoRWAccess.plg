@@ -1,0 +1,42 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: AdoRWAccess - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Release/AdoRWAccess.res" /d "NDEBUG" /d "_AFXDLL" "D:\c_programs\C_WORKSPACE\VC教材实例\AdoRWAccess\AdoRWAccess.rc"" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP74.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/AdoRWAccess.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\c_programs\C_WORKSPACE\VC教材实例\AdoRWAccess\AdoRWAccess.cpp"
+"D:\c_programs\C_WORKSPACE\VC教材实例\AdoRWAccess\AdoRWAccessDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP74.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP75.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/AdoRWAccess.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\c_programs\C_WORKSPACE\VC教材实例\AdoRWAccess\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP75.tmp" 
+Creating command line "link.exe /nologo /subsystem:windows /incremental:no /pdb:"Release/AdoRWAccess.pdb" /machine:I386 /out:"Release/AdoRWAccess.exe"  ".\Release\AdoRWAccess.obj" ".\Release\AdoRWAccessDlg.obj" ".\Release\StdAfx.obj" ".\Release\AdoRWAccess.res" "
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+AdoRWAccess.cpp
+d:\c_programs\c_workspace\vc教材实例\adorwaccess\release\msado15.tlh(407) : warning C4146: unary minus operator applied to unsigned type, result still unsigned
+AdoRWAccessDlg.cpp
+d:\c_programs\c_workspace\vc教材实例\adorwaccess\release\msado15.tlh(407) : warning C4146: unary minus operator applied to unsigned type, result still unsigned
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+AdoRWAccess.exe - 0 error(s), 2 warning(s)
+</pre>
+</body>
+</html>

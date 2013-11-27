@@ -1,0 +1,54 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MySyn1 - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Release/MySyn1.res" /d "NDEBUG" /d "_AFXDLL" "D:\c_programs\C_WORKSPACE\VC教材实例\10MySyn1\MySyn1.rc"" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPC8.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/MySyn1.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\c_programs\C_WORKSPACE\VC教材实例\10MySyn1\MainFrm.cpp"
+"D:\c_programs\C_WORKSPACE\VC教材实例\10MySyn1\MySyn1.cpp"
+"D:\c_programs\C_WORKSPACE\VC教材实例\10MySyn1\MySyn1Doc.cpp"
+"D:\c_programs\C_WORKSPACE\VC教材实例\10MySyn1\MySyn1View.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPC8.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPC9.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/MySyn1.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\c_programs\C_WORKSPACE\VC教材实例\10MySyn1\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPC9.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPCA.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release/MySyn1.pdb" /machine:I386 /out:"Release/MySyn1.exe" 
+".\Release\MainFrm.obj"
+".\Release\MySyn1.obj"
+".\Release\MySyn1Doc.obj"
+".\Release\MySyn1View.obj"
+".\Release\StdAfx.obj"
+".\Release\MySyn1.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPCA.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+MainFrm.cpp
+MySyn1.cpp
+MySyn1Doc.cpp
+MySyn1View.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+MySyn1.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

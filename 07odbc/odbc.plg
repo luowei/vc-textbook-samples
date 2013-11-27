@@ -1,0 +1,57 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: odbc - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Release/odbc.res" /d "NDEBUG" /d "_AFXDLL" "D:\c_programs\C_WORKSPACE\VC教材实例\07odbc\odbc.rc"" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP69.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/odbc.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\c_programs\C_WORKSPACE\VC教材实例\07odbc\MainFrm.cpp"
+"D:\c_programs\C_WORKSPACE\VC教材实例\07odbc\odbc.cpp"
+"D:\c_programs\C_WORKSPACE\VC教材实例\07odbc\odbcDoc.cpp"
+"D:\c_programs\C_WORKSPACE\VC教材实例\07odbc\odbcSet.cpp"
+"D:\c_programs\C_WORKSPACE\VC教材实例\07odbc\odbcView.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP69.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP6A.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/odbc.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\c_programs\C_WORKSPACE\VC教材实例\07odbc\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP6A.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP6B.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release/odbc.pdb" /machine:I386 /out:"Release/odbc.exe" 
+".\Release\MainFrm.obj"
+".\Release\odbc.obj"
+".\Release\odbcDoc.obj"
+".\Release\odbcSet.obj"
+".\Release\odbcView.obj"
+".\Release\StdAfx.obj"
+".\Release\odbc.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP6B.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+MainFrm.cpp
+odbc.cpp
+odbcDoc.cpp
+odbcSet.cpp
+odbcView.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+odbc.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

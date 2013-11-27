@@ -1,0 +1,41 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: FirstMFC - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP61C.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/FirstMFC.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /c 
+"D:\c_programs\C_WORKSPACE\FirstMFC\FirstMFCView.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP61C.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP61D.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/FirstMFC.pdb" /debug /machine:I386 /out:"Debug/FirstMFC.exe" /pdbtype:sept 
+.\Debug\FirstMFC.obj
+.\Debug\StdAfx.obj
+.\Debug\MainFrm.obj
+.\Debug\FirstMFCDoc.obj
+.\Debug\FirstMFCView.obj
+.\Debug\FirstMFC.res
+.\Debug\PasswordDialog.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP61D.tmp"
+<h3>Output Window</h3>
+Compiling...
+FirstMFCView.cpp
+Linking...
+Creating command line "bscmake.exe /nologo /o"Debug/FirstMFC.bsc"  .\Debug\StdAfx.sbr .\Debug\FirstMFC.sbr .\Debug\MainFrm.sbr .\Debug\FirstMFCDoc.sbr .\Debug\FirstMFCView.sbr .\Debug\PasswordDialog.sbr"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+FirstMFC.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

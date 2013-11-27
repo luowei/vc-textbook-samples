@@ -1,0 +1,190 @@
+屏幕绘图：
+	一般步骤：
+	1.利用绘图工具类创建绘图工具对象
+		如：CPen(画笔类),CBrush(画刷类),CFont(字体类)
+
+	CDC类进行绘图：
+	1.在视图类的OnDraw()函数中绘图
+	步骤：
+		1.选择绘图工具
+			例：pDC->SelectObject(LTGRAY_BRUSH);
+		2.绘制图像
+			例1：绘制矩形
+				1.定义矩形
+				CRect rect(10,10,200,70);
+				2.画一个矩形
+				pDC->Rectangle(rect);
+			例2：绘制文本
+				pDC->TextOut(100,80,"Hello,VC++编程");
+	2.在视图类的一般函数中绘图
+		第1种：是在堆栈上构造对象，构造的对象会被自动删除。
+			例：
+			void CMyHelloView::OnLbuttonDown(UINT nFlags,CPoint point)
+			{
+				CDC dc(this);			//构造对象dc
+				CRect rect(0,0,100,100)	//定义一个矩形
+				dc.Rectang(rect);		//绘图
+			}	//dc自动地被释放
+		第2种：调用GetDC()函数获得显示设备环境的指针pDC进行绘图，但绘图完毕后，
+		必须调用ReleaseDC()函数来释放它。
+			例：
+			void CMyHelloView::OnLbuttonDown(UINT nFlags,CPoint point)
+			{
+				CDC* pDC=GetDC();  //获取设备环境的指针
+				CRect rect;			//绘图部分
+				pDC->Rectang(rect);
+				ReleaseDC(pDC);		//释放pDC
+			}
+
+	CPaintDC类进行绘图：
+	应用于对话框程序，它可以处理来自Windows的WM_PAINT消息，所以通常是在OnPaint消息响应函数中使用。
+		例：
+		void MyTestDlg::OnPaint()
+		{
+		//1.创建一个CPaintDC类的对象
+			CPaintDC dc(this);
+		//2.调用CPaintDC类的函数进行绘图
+			dc.MoveTo(10,10);	//调用MoveTo()函数，定位到点(10,10)
+			dc.LineTo(100,100);	//调用LineTo()函数，画线到点(100,100)
+			dc.Ellipse(120,120,160,160);	//调用画椭圆函数Ellipse()
+			CDialog::OnPaint();
+		}
+
+	CClientDC类进行绘图：
+	CClientDC类对象主要用来自动处理对描述窗口的客户程序区域的设备环境进行调用和释放。在CClientDC类对象
+	创建时自动调用GetDC(),在撤销时将自动调用ReleaseDC()。
+		例：
+		void CMyHelloView::OnLbuttonDown(UINT nFlags,CPoint point)
+		{
+			CClientDC dc(this);
+			CRect rect;
+			GetClientRect(&rect);
+			dc.MoveTo(rect.left,rect.Top);		//定位到客户程序区域的左上角
+			dc.LineTo(rect.right,rect.bottom);	//画线到客户程序区域的右下角
+			Cview::OnLbuttonDown(nFlags,point);
+		}
+
+	绘图工具：
+		CPen(画笔类)：
+			1.构造和初始化对象都在带参数的构造函数中一步完成
+				CPen newPen(PS_SOLID,2,RGB(2,255,0));
+			2.构造和初始化分两步完成，构造由不带参数的构造函数完成，而初始化由初始函数完成。
+				CPen newPen;
+				newPen.CreatePen(PS_SOLID,2,RGB(0,255,0));
+		CBrush(画刷类):
+			1.构造和初始化对象都在带参数的构造函数中一步完成
+				CBrush newBrush(RGB(0,0,255));
+			2.构造和初始化分两步完成，构造由不带参数的构造函数完成，而初始化由初始函数完成。
+				CBrush newBrush;
+				newBrush.CreateSolidBrush(RGB(0,255,0));
+		CFont(字体类)：创建字体由两步完成
+			1.定义一个CFont类的对象，应用框架会调用构造函数
+				CFont myFont;
+			2.调用CFont类的创建字体函数，将构造的CFont类对象与Windows的某种字体相关联
+				myFont.CreateFont(...);
+				其中,CreateFont()原型为：
+				BOOL CreateFont(
+					int nHeight,		//字体高度
+					int nWidth,			//字符平均宽度
+					int nEscapement,	//文本行角度
+					int nOrientation,	//字符角度
+					int nWeight,		//字符粗细度
+					BYTE bItalic,		//斜体
+					BYTE bUnderline,	//下划线
+					BYTE cStrikeOut,	//删除线
+					BYTE nCharSet,		//字符集
+					BYTE nOutPrecison,	//字体输出结果和要求的匹配程度
+					BYTE nClipPrecison,	//如何裁剪落于裁剪区之外的字符
+					BYTE nQuality,		//字体属性匹配的精确程度
+					BYTE nPitchAnFamily,//字体间距和字体簇
+					BYTE lpszFacename	//字体名称
+				);
+
+		矢量图形：
+		点(CPoint):
+			CPoint类是对Windows结构POINT的封装，POINT结构：
+				Typedef struct tagPOINT
+				{
+					LONG X;
+					LONG Y;
+				}POINT;
+			画点的函数：CDC::SetPixel(),原型为：
+				COLORREF SetPixel(POINT point,COLORREF crColor);
+			例：
+				CClientDC dc(this);
+				CPoint point(100,200);
+				dc.SetPixel(point,RGB(255,0,0));
+
+		直线：绘制线条函数由CDC::MoveTo()和CDC::LineTo()完成
+			MoveTo()函数用于设定当前点的位置，其原型为：
+				CPoint MoveTo(int x,int y);
+				CPoint MoveTo(CPoint point);
+			LineTo()函数用于画一条从当前点到指定点的直线，然后将指定咪设为当前点。
+			画线的样式取决于指定的画笔，其原型为：
+				BOOL LineTo(int x,int y);
+				BOOL LineTo(CPoint point);
+			例：
+				在屏幕上从点p1(100,200)到p2(150,300)画一个线段
+					CClientDC dc(this);
+					CPoint p1(100,200),p2(150,300);
+					dc.MoveTo(p1);
+					dc.LineTo(p2);
+
+		矩形(CRect):
+		Windows定义了一个描述矩形的结构RECT:
+			Typedef struct tagRECT
+			{
+				LONG left;
+				LONG top;
+				LONG right;
+				LONG botton;
+			}RECT,*PRECT,NEAR* NPRECT,FAR* LPRECT;
+			画矩形的常用函数是CDC::Rectangle()和CDC::FillRect()，
+			CDC::Rectangle()函数原型为：
+				BOOL Rectangle(int x1,int y1,int x2,int y2);
+				BOOL Rectangle(LPCRECT lpRect);
+			CDC::FillRect()函数原型为： 该函数使用给定的画刷给矩形填充颜色
+				void FillRect(LPCRECT lpRect,CBrush* pBrush);
+			例：
+				CPaintDC dc(this);
+				dc.Rectangle(120,120,160,160);
+		
+		椭圆：画椭圆的函数为CDC::Ellipse()
+			CDC::Ellipse()函数原型为：
+				BOOL Ellipse(int x1,int y1,int x2,int y2);
+				BOOL Ellipse(LPCRECT lpRect);
+			例：
+				CPaintDC dc(this);
+				dc.Ellipse(120,120,160,160);
+
+		CBitmap(位图类):CBitmap类封装了Windows的GDI位图操作所需的大部分函数。
+			LoadBitmap是位图的初始化函数，从应用程序中调用一个位图资源，其函数原型为：
+				BOOL LoadBitmap(LPCTSTR lpszResourceName);
+				BOOL LoadBitmap(UINT nIDResource);
+			若要直接创建一个位图对象，可使用CBitmap类中的CreateBitmap(),CreateBitmapIndirect()以及
+			CreateCompatibleBitmap()函数，其函数原型为：
+				BOOL CreateBitmap(int nWidth,int nHeight,UINT nPlanes,UINT nBitcount,const void* lpBits);
+				BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
+				BOOL CreateCompatibleBitmap(CDC* pDC,int nWidth,,int nHeight);
+			
+				GDI位图的显示
+				步骤：
+					1.调用CBitmap类的CreateBitmap(),CreateCompatibleBitmap()以及CreateBitmapIndirect()函数创建
+					一个适当的位图对象。
+					2.调用CDC::CreateCompatibleDC()函数创建一个内存设备环境，以便位图在内存中保存下来，并与指定的
+					设备(窗口设备)环境相兼容。
+					3.调用CDC::SelectObject()函数将位图对象选入设备环境中。
+					4.调用CDC::BitBlt()或CDC::StretchBlt()函数将位图复制到实际设备环境中。
+					5.使用之后恢复原来的内存设备环境。
+				例：
+					见本工程中 void CMyDraw::OnShowbitmap()函数
+				
+				BMP文件的显示
+				步骤：
+					1.定义一个HBITMAP类型变量bitmap，通过它的LoadImage()函数将指定的位图文件读取进来。
+					2.创建兼容的内存设备描述表，并通过SelectObject()将位图选入内存设备描述表中。
+					3.调用BitBlt()函数将位图绘制在客户程序区域。
+				例：
+					见本工程中 void CMyDrawView::OnDbmp()函数
+
+		CPalette(调色板类),CRgn(绘图区域类)。。。暂留。。
